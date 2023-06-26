@@ -17,7 +17,7 @@ import java.util.Set;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String title;
     @Enumerated(EnumType.STRING)
     private CategoryIsMain is_main;
@@ -30,6 +30,9 @@ public class Category {
     @ManyToOne
     @JoinColumn(name="parent_id",nullable = false)
     private Category parentCat;
+
+    @OneToMany(mappedBy = "category",fetch = FetchType.LAZY)
+    private Set<Product> products;
 
 
 }
