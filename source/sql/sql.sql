@@ -12,8 +12,8 @@ updated_at timestamp null default null
 create table categories(
 id int not null auto_increment primary key,
 title varchar(200),
-is_main enum('0','1'),
-has_child int DEFAULT 0,
+is_main enum('ok','nok') default 'nok',
+has_child enum('0','1') default '0',
 child_count int DEFAULT 0,
 parent_id int,
 
