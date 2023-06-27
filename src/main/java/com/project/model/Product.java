@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -21,5 +22,9 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "category_id",nullable = false)
     private Category category;
+
+
+    @OneToMany(mappedBy = "product",fetch =FetchType.LAZY)
+    private Set<OrderDetails> orderDetails;
 
 }
