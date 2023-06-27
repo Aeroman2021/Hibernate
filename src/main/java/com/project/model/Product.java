@@ -12,17 +12,19 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
-
-public class User {
+@Table(name = "products")
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String username;
-    private String pass;
+    private String title;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private Set<Order> orders;
+    @ManyToOne
+    @JoinColumn(name = "category_id",nullable = false)
+    private Category category;
+
+
+    @OneToMany(mappedBy = "product",fetch =FetchType.LAZY)
+    private Set<OrderDetails> orderDetails;
 
 }

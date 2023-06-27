@@ -70,11 +70,12 @@ updated_at timestamp null default null
 create table orderdetails(
 id int not null auto_increment primary key,
 title varchar(200),
-user_id int,
+pro_count int,
+product_id int,
 order_id int,
 
-index orderdetail_user_index(user_id),
-constraint orderdetail_user_fk foreign key (user_id) references users(id),
+index orderdetail_product_index(product_id),
+constraint orderdetail_product_fk foreign key (product_id) references products(id),
 index orderdetail_order_index(order_id),
 constraint orderdetail_order_fk foreign key (order_id) references orders(id),
 
