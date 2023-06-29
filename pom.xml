@@ -8,14 +8,7 @@
   <name>sample-project Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceencoding>UTF-8</project.build.sourceencoding>
-    </properties>
-
     <dependencies>
-<!--        //////////////////////////////////////////////////////////////////////////database-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -24,19 +17,23 @@
 
         <dependency>
             <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.6.15.Final</version>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.1.7.Final</version>
         </dependency>
 
-        <!--        //////////////////////////////////////////////////////////////////////////code-generator-->
+        <!--    ////////////////////////////////////////////////code generator-->
 
         <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.18.24</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
         </dependency>
 
     </dependencies>
+
+
+
+
 
 
 </project>

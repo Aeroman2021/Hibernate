@@ -1,12 +1,12 @@
-package com.project.model;
+package com.project.model.entity;
 
+import jakarta.persistence.*;
 
-import com.project.model.entity.CategoryIsMain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+
 import java.util.Set;
 
 @Data
