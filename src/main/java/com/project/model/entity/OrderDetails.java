@@ -1,10 +1,9 @@
-package com.project.model;
+package com.project.model.entity;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
@@ -27,4 +26,6 @@ public class OrderDetails {
     @ManyToOne
     @JoinColumn(name = "order_id",nullable = false)
     private Order order;
+
+
 }
